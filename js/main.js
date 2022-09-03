@@ -5,4 +5,4 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mobil_menu_1 = __importDefault(require("./includes/mobil-menu"));
 const d = document;
-d.querySelector('#mobil-des div').addEventListener('click', mobil_menu_1.default);
+d.querySelector('#mobil-des').addEventListener('click', mobil_menu_1.default);

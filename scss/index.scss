@@ -1,5 +1,5 @@
 
-$primary:#da8c34;
+$primary:#ee9d40;;
 $fontPrimary:  'Kanit', sans-serif;
 $fontSecondary:'Source Sans Pro', sans-serif;
 
@@ -30,6 +30,7 @@ li, a{
 
 body { 
     background-color: white;
+
 }
 
 header{
@@ -38,8 +39,9 @@ header{
     z-index: 1000;
     width: 100%;
     display:flex;
+    background-color: rgb(245, 239, 229);
     justify-content: space-between;
-    background-color: #da8c34;
+    
     height: 90px;
     color:#3d3c3c;
     .menu-mobil{
@@ -86,11 +88,13 @@ header{
     }
     .col-izq{
         margin:5px;
+        background-color: #ee9d40;
         display: flex;
         align-items: center;
-        border-right: 1px solid #3d3c3c;
+        border: 1px solid #3d3c3c;
         justify-content: flex-start;
         width: 80%;
+        border-radius: 5px;
         img{
             //width: 20%;
             max-height:100%;
@@ -120,13 +124,16 @@ header{
             }
 
         }
+        nav{
+            display:none;
+        }
     }
 }
 
 main{
     margin-top:90px;
     .main-banner{
-        //border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
         #carouselExampleInterval{
             
             .carousel-inner{
@@ -141,6 +148,7 @@ main{
 
     .somos{
         margin-top:30px;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -214,12 +222,131 @@ main{
         }
         div div{
             margin-top:30px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+
+            h3{
+                font-size:1.5rem;
+            }
             p{
+                padding-left: 5px;
+                display:inline;
                 font-family: $fontSecondary;
                 font-size:1.2rem;
+                margin-bottom:0;
             }
             
         }
 
     }
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    background-color: rgb(245, 239, 229);
+    h5{
+        font-family: $fontSecondary;
+        font-size:14px;
+    }
+
+}
+
+// Media queries
+
+@media all and (min-width: 520px){
+
+    main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
+        height: 250px;
+    }
+
+}
+
+@media all and (min-width:760px){
+    
+    main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
+        height: 350px;
+    }
+    main .somos .col-der p{
+        font-size: 18px;
+    }
+
+}
+@media all and (min-width:1020px){
+
+
+    header{
+
+        .menu-bars{
+            display: none;
+        }
+        .col-izq{
+            width: 30%;
+        }
+        .col-der{
+            width: 70%;
+            nav{
+                display: flex;
+                flex-wrap: nowrap;
+                a{
+                    border-bottom: 1px solid rgb(70, 70, 70);
+                    margin:0 5px;
+                    font-size:1.3rem;
+                    color:#131212;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        font-size: 1.4rem;
+                        width: auto+5px;
+                        color:#413e3e;
+                    }
+                }
+               
+            }
+        }
+        .menu-mobil{
+            display: none;
+        }
+        
+    }
+
+
+
+
+    main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
+        height: 450px;
+    }
+    main .somos{
+        display : flex;
+        flex-direction: row;
+        height: 250px;
+        .col-izq{
+            width: 30%;
+            border-bottom: none !important;
+            border-right: 1px solid rgb(204, 204, 204);
+            justify-content: center;
+            height:50%;
+            display: flex;
+            align-items: center;
+            margin-bottom:0;
+        }
+        .col-der{
+            width: 70%;
+            margin-top:0;
+        }
+    }
+    #contact{
+        height: 250px;
+      
+        div{
+            display: flex;
+        }
+    } 
+
 }
