@@ -95,6 +95,7 @@ header{
             //width: 20%;
             max-height:100%;
         }
+
         h1{
 
             font-weight: 900;
@@ -201,6 +202,24 @@ main{
     .contact{
 
         padding-top:30px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            display: inline;
+            padding-bottom: 10px;
+            font-size:2rem;
+            border-bottom: 1px solid #ccc;
+
+        }
+        div div{
+            margin-top:30px;
+            p{
+                font-family: $fontSecondary;
+                font-size:1.2rem;
+            }
+            
+        }
 
     }
 }

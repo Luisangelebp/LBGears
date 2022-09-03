@@ -11107,4 +11107,20 @@ main .productos .container .card .card-text {
 }
 main .contact {
   padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .contact h2, main .contact .h2 {
+  display: inline;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+main .contact div div {
+  margin-top: 30px;
+}
+main .contact div div p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=index.css.map */
