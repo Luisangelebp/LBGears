@@ -265,7 +265,7 @@ footer {
 // Modal cards
 
 .modal-info{
-    background: rgba(0, 0, 0, 0.89);
+    background: rgba(0, 0, 0, 0.69);
     position: fixed;
     z-index:1000;
     height:100vh;
@@ -286,6 +286,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 2;
         .modal-header{
             height:10%;
             display: flex;
@@ -310,15 +311,20 @@ footer {
 
             }
         }
-        img{
-            margin-top: 5px;
-            width: 90%;
-            position: relative;
-            border-bottom: 1px solid #ccc;
-        }
         .modal-body{
-            width: 90%;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            overflow-y: scroll;
+            margin-bottom:8px;
+            img{
+                margin: 0;
+                margin-top: 5px;
+                width: 100%;
+                position: relative;
+                border-bottom: 1px solid #ccc;
+            }
             p{
                 font-family: $fontSecondary;
                 font-size: 1.1rem;
@@ -332,11 +338,17 @@ footer {
 
 // Media queries
 
+
 @media all and (min-width: 520px){
 
     main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
         height: 250px;
     }
+
+    #modal-info > div{
+        width:80%;
+    }
+
 
 }
 
@@ -348,6 +360,19 @@ footer {
     main .somos .col-der p{
         font-size: 18px;
     }
+    #modal-info > div{
+        width:70%;
+        .modal-body{
+            overflow-y:auto;
+        }
+    }
+
+
+
+    #image-modal{
+        width: 80%;
+    }
+
 
 }
 @media all and (min-width:1020px){
@@ -436,6 +461,41 @@ footer {
         }
     } 
 
+    #modal-info > div{
+        width:90%;
+        .modal-header{
+            height: 15%;
+            h4{
+                font-size: 2rem;
+            }
+            button{
+                font-size:2rem;
+                &:hover{
+                    background-color:$primary;
+                }
+            }
+        }
+    }
+
+    #modal-info > div > div.modal-body{
+        flex-direction: row;
+        img{
+            width:40%;
+            border-bottom: none;
+            border-right: 1px solid #ccc;
+        }
+        #info-body{
+            height:100%;
+            padding:0 15px;
+            display: flex;
+            align-items: center;
+            p{
+                font-size:1.2rem;
+                text-align: justify;
+            }
+        }
+    }
+
 }
 
 @media all and (min-width:1400px){
@@ -447,6 +507,9 @@ footer {
         margin-left:50px;
     }
 
+    #modal-info > div{
+        width:75%;
+    }
 
 }
 
@@ -456,5 +519,9 @@ footer {
     }
     #productos > h2{
         margin-left:500px;
+    }
+
+    #modal-info > div{
+        width:65%;
     }
 }

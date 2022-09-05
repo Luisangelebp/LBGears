@@ -11161,7 +11161,7 @@ footer h5, footer .h5 {
 }
 
 .modal-info {
-  background: rgba(0, 0, 0, 0.89);
+  background: rgba(0, 0, 0, 0.69);
   position: fixed;
   z-index: 1000;
   height: 100vh;
@@ -11183,6 +11183,7 @@ footer h5, footer .h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 .modal-info .modal-content .modal-header {
   height: 10%;
@@ -11207,15 +11208,20 @@ footer h5, footer .h5 {
   border-radius: 3px;
   background-color: #ee9d40;
 }
-.modal-info .modal-content img {
-  margin-top: 5px;
+.modal-info .modal-content .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
+  overflow-y: scroll;
+  margin-bottom: 8px;
+}
+.modal-info .modal-content .modal-body img {
+  margin: 0;
+  margin-top: 5px;
+  width: 100%;
   position: relative;
   border-bottom: 1px solid #ccc;
-}
-.modal-info .modal-content .modal-body {
-  width: 90%;
-  display: flex;
 }
 .modal-info .modal-content .modal-body p {
   font-family: "Source Sans Pro", sans-serif;
@@ -11230,6 +11236,9 @@ footer h5, footer .h5 {
   main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
     height: 250px;
   }
+  #modal-info > div {
+    width: 80%;
+  }
 }
 @media all and (min-width: 760px) {
   main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
@@ -11237,6 +11246,15 @@ footer h5, footer .h5 {
   }
   main .somos .col-der p {
     font-size: 18px;
+  }
+  #modal-info > div {
+    width: 70%;
+  }
+  #modal-info > div .modal-body {
+    overflow-y: auto;
+  }
+  #image-modal {
+    width: 80%;
   }
 }
 @media all and (min-width: 1020px) {
@@ -11312,6 +11330,39 @@ footer h5, footer .h5 {
   #contact div {
     display: flex;
   }
+  #modal-info > div {
+    width: 90%;
+  }
+  #modal-info > div .modal-header {
+    height: 15%;
+  }
+  #modal-info > div .modal-header h4, #modal-info > div .modal-header .h4 {
+    font-size: 2rem;
+  }
+  #modal-info > div .modal-header button {
+    font-size: 2rem;
+  }
+  #modal-info > div .modal-header button:hover {
+    background-color: #ee9d40;
+  }
+  #modal-info > div > div.modal-body {
+    flex-direction: row;
+  }
+  #modal-info > div > div.modal-body img {
+    width: 40%;
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+  }
+  #modal-info > div > div.modal-body #info-body {
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+  }
+  #modal-info > div > div.modal-body #info-body p {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
 }
 @media all and (min-width: 1400px) {
   main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
@@ -11320,6 +11371,9 @@ footer h5, footer .h5 {
   #productos > h2, #productos > .h2 {
     margin-left: 50px;
   }
+  #modal-info > div {
+    width: 75%;
+  }
 }
 @media all and (min-width: 2500px) {
   main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
@@ -11327,5 +11381,8 @@ footer h5, footer .h5 {
   }
   #productos > h2, #productos > .h2 {
     margin-left: 500px;
+  }
+  #modal-info > div {
+    width: 65%;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -35,12 +35,13 @@ function crear_modal() {
         modal.body.appendChild(p);
         body.className = 'body-hidden';
         modal.modal.className += ' active';
-        modal.close.addEventListener('click', () => {
+        modal.close.addEventListener('click', cerrarModal);
+        function cerrarModal() {
             body.className = '';
             modal.modal.className = 'modal-info';
             modal.title.removeChild(title);
             modal.body.removeChild(p);
-        });
+        }
     });
 }
 exports.crear_modal = crear_modal;

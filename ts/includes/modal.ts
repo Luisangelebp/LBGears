@@ -30,11 +30,13 @@ export async function crear_modal(this: any){
     body.className = 'body-hidden';
     modal.modal.className += ' active';
 
-    modal.close.addEventListener('click',()=>{
+    modal.close.addEventListener('click', cerrarModal)
+
+    function cerrarModal():void{
         body.className = '';
         modal.modal.className = 'modal-info';
         modal.title!.removeChild(title);
         modal.body.removeChild(p);
-    })
+    }
     
 }
