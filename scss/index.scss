@@ -30,13 +30,13 @@ li, a{
 
 body { 
     background-color: white;
-
+    z-index: auto;
 }
 
 header{
-    position: fixed;
+    position: sticky;
     top:0;
-    z-index: 1000;
+    z-index: 4;
     width: 100%;
     display:flex;
     background-color: rgb(245, 239, 229);
@@ -134,7 +134,7 @@ header{
 }
 
 main{
-    margin-top:90px;
+    // margin-top:90px;
     .main-banner{
         border-bottom: 1px solid #ccc;
         #carouselExampleInterval{
@@ -389,4 +389,72 @@ footer {
     #productos > h2{
         margin-left:500px;
     }
+}
+
+// Modal cards
+
+.modal-info{
+    background: rgba(0, 0, 0, 0.89);
+    position: fixed;
+    z-index:1000;
+    height:100vh;
+    width:100vw;
+    display:none;
+    &.active{
+        display:block;
+    }
+    .modal-content{
+        position: relative;
+        background-color:#fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height:70%;
+        width:95%;
+        border-radius:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .modal-header{
+            height:10%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            width:100%;
+            h4{
+                line-height:0;
+                margin-bottom:0;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            button{
+                background-color:rgba($primary,0.7);
+                border-radius:8px;
+                &:active{
+                    border-radius:3px;
+                    background-color:$primary;
+                }
+
+            }
+        }
+        img{
+            margin-top: 5px;
+            width: 90%;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+        }
+        .modal-body{
+            width: 90%;
+            display: flex;
+            p{
+                font-family: $fontSecondary;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+.body-hidden{
+    overflow: hidden;
 }

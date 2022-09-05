@@ -1,0 +1,52 @@
+{
+    "productos":[
+        {
+            "id":0,
+            "title":"Desmalezadora",
+            "text":"DOMOPOWER 52cc  --  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus impedit aut, debitis, sed quisquam",
+            "img":"../img/guadaña.jpeg"
+        },
+        {
+            "id":1,
+            "title":"Desmalezadora",
+            "text":"DOMOPOWER 32cc  -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus impedit aut, debitis, sed quisquam",
+            "img":"../img/guadaña_2.jpeg"
+        },
+        {
+            "id":2,
+            "title":"Motosierra",
+            "text":"STIHL MS 210 -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus impedit aut, debitis, sed quisquam",
+            "img":"../img/motosierra-stihl-ms210-nogalpark-1502373804.jpg"
+        },
+        {
+            "id":3,
+            "title":"Cierra de mesa",
+            "text":"KN RXW-12M / 11174 -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus",
+            "img":"../img/cierra2x.jpg"
+        },
+        {
+            "id":4,
+            "title":"Hidrolimpiadora",
+            "text":"1600PSI ELECT SEMI-PROF DOMOSA 33-HL-1600I -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus",
+            "img":"../img/hidrolimpiadora-1600psi-elect-semi-prof-domosa-33-hl-1600i.jpg"
+        },
+        {
+            "id":5,
+            "title":"Hidrolimpiadora",
+            "text":"Hidrolavadora Hidrojet Truper --Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus",
+            "img":"../img/D_NQ_NP_815452-MLV50325596608_062022-V.jpg"
+        },
+        {
+            "id":6,
+            "title":"Bomba de agua",
+            "text":"Bomba de agua 1/2 HP, Truper Expert 10068 -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus",
+            "img":"../img/bomba-periferica-1-2-hp-truper-expert-589.jpg"
+        },
+        {
+            "id":7,
+            "title":"Tractores de Jardín",
+            "text":"John Deere LA -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nemo unde natus repellat sunt. Accusamus impedit aut, debitis, sed quisquam illum vero nulla, enim temporibus illo sapiente ducimus perspiciatis placeat?",
+            "img":"../img/x750_studio_r4a032288_large_ab59c71afab97f73857f5dfd150eaa9255ead06e.jpg"
+        }
+    ]
+}
