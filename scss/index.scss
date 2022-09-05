@@ -62,7 +62,7 @@ header{
             flex-direction: column;
             align-items: center;
             margin: 0;
-
+            
             li{
                 margin:5px;
                 
@@ -101,7 +101,7 @@ header{
             //width: 20%;
             max-height:100%;
         }
-
+        
         h1{
 
             font-weight: 900;
@@ -125,7 +125,7 @@ header{
                 border-radius: 10px;
                 background-color:#03030327;
             }
-
+            
         }
         nav{
             display:none;
@@ -148,7 +148,7 @@ main{
             }
         }
     }
-
+    
     .somos{
         padding-top: 30px;
         
@@ -160,7 +160,7 @@ main{
                 font-family: $fontPrimary;
                 font-size:1.7rem;
                 font-style: italic;
-            
+                
             }
             margin-bottom:10px;
             border-bottom: 1px solid #ccc;
@@ -177,7 +177,7 @@ main{
             }
         }
     }
-
+    
     .productos{
         margin-top:30px;
         padding-top: 30px;
@@ -209,7 +209,7 @@ main{
             }
         }
     }
-
+    
     .contact{
 
         padding-top:30px;
@@ -221,7 +221,7 @@ main{
             padding-bottom: 10px;
             font-size:2rem;
             border-bottom: 1px solid #ccc;
-
+            
         }
         div div{
             margin-top:30px;
@@ -230,7 +230,7 @@ main{
             padding: 10px;
             text-align: center;
             justify-content: center;
-
+            
             h3{
                 font-size:1.5rem;
             }
@@ -243,7 +243,7 @@ main{
             }
             
         }
-
+        
     }
 }
 
@@ -259,7 +259,75 @@ footer {
         font-family: $fontSecondary;
         font-size:14px;
     }
+    
+}
 
+// Modal cards
+
+.modal-info{
+    background: rgba(0, 0, 0, 0.89);
+    position: fixed;
+    z-index:1000;
+    height:100vh;
+    width:100vw;
+    display:none;
+    &.active{
+        display:block;
+    }
+    .modal-content{
+        position: relative;
+        background-color:#fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height:70%;
+        width:95%;
+        border-radius:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .modal-header{
+            height:10%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            width:100%;
+            h4{
+                line-height:0;
+                margin-bottom:0;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            button{
+                background-color:rgba($primary,0.7);
+                border-radius:8px;
+                &:active{
+                    border-radius:3px;
+                    background-color:$primary;
+                }
+
+            }
+        }
+        img{
+            margin-top: 5px;
+            width: 90%;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+        }
+        .modal-body{
+            width: 90%;
+            display: flex;
+            p{
+                font-family: $fontSecondary;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+.body-hidden{
+    overflow: hidden;
 }
 
 // Media queries
@@ -389,72 +457,4 @@ footer {
     #productos > h2{
         margin-left:500px;
     }
-}
-
-// Modal cards
-
-.modal-info{
-    background: rgba(0, 0, 0, 0.89);
-    position: fixed;
-    z-index:1000;
-    height:100vh;
-    width:100vw;
-    display:none;
-    &.active{
-        display:block;
-    }
-    .modal-content{
-        position: relative;
-        background-color:#fff;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height:70%;
-        width:95%;
-        border-radius:10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .modal-header{
-            height:10%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 15px;
-            border-bottom: 1px solid #ccc;
-            text-align: center;
-            width:100%;
-            h4{
-                line-height:0;
-                margin-bottom:0;
-                font-size: 1.5rem;
-                font-weight: 300;
-            }
-            button{
-                background-color:rgba($primary,0.7);
-                border-radius:8px;
-                &:active{
-                    border-radius:3px;
-                    background-color:$primary;
-                }
-
-            }
-        }
-        img{
-            margin-top: 5px;
-            width: 90%;
-            position: relative;
-            border-bottom: 1px solid #ccc;
-        }
-        .modal-body{
-            width: 90%;
-            display: flex;
-            p{
-                font-family: $fontSecondary;
-                font-size: 1.1rem;
-            }
-        }
-    }
-}
-.body-hidden{
-    overflow: hidden;
 }

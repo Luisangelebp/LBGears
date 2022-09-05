@@ -11160,6 +11160,72 @@ footer h5, footer .h5 {
   font-size: 14px;
 }
 
+.modal-info {
+  background: rgba(0, 0, 0, 0.89);
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+.modal-info.active {
+  display: block;
+}
+.modal-info .modal-content {
+  position: relative;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 95%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-info .modal-content .modal-header {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 100%;
+}
+.modal-info .modal-content .modal-header h4, .modal-info .modal-content .modal-header .h4 {
+  line-height: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.modal-info .modal-content .modal-header button {
+  background-color: rgba(238, 157, 64, 0.7);
+  border-radius: 8px;
+}
+.modal-info .modal-content .modal-header button:active {
+  border-radius: 3px;
+  background-color: #ee9d40;
+}
+.modal-info .modal-content img {
+  margin-top: 5px;
+  width: 90%;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.modal-info .modal-content .modal-body {
+  width: 90%;
+  display: flex;
+}
+.modal-info .modal-content .modal-body p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.1rem;
+}
+
+.body-hidden {
+  overflow: hidden;
+}
+
 @media all and (min-width: 520px) {
   main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
     height: 250px;
@@ -11262,69 +11328,4 @@ footer h5, footer .h5 {
   #productos > h2, #productos > .h2 {
     margin-left: 500px;
   }
-}
-.modal-info {
-  background: rgba(0, 0, 0, 0.89);
-  position: fixed;
-  z-index: 1000;
-  height: 100vh;
-  width: 100vw;
-  display: none;
-}
-.modal-info.active {
-  display: block;
-}
-.modal-info .modal-content {
-  position: relative;
-  background-color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 70%;
-  width: 95%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.modal-info .modal-content .modal-header {
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  width: 100%;
-}
-.modal-info .modal-content .modal-header h4, .modal-info .modal-content .modal-header .h4 {
-  line-height: 0;
-  margin-bottom: 0;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-.modal-info .modal-content .modal-header button {
-  background-color: rgba(238, 157, 64, 0.7);
-  border-radius: 8px;
-}
-.modal-info .modal-content .modal-header button:active {
-  border-radius: 3px;
-  background-color: #ee9d40;
-}
-.modal-info .modal-content img {
-  margin-top: 5px;
-  width: 90%;
-  position: relative;
-  border-bottom: 1px solid #ccc;
-}
-.modal-info .modal-content .modal-body {
-  width: 90%;
-  display: flex;
-}
-.modal-info .modal-content .modal-body p {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.1rem;
-}
-
-.body-hidden {
-  overflow: hidden;
 }/*# sourceMappingURL=index.css.map */
