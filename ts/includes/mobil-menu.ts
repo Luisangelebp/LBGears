@@ -8,7 +8,6 @@ export default (): void => {
     }
     for(let i = 0; i < hijos.length; i++){
         hijos[i]!.addEventListener('click', (e) => {
-            e.preventDefault();
             mobil!.className = 'menu-mobil';
         })
     

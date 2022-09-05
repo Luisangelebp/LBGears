@@ -11017,7 +11017,9 @@ header .col-izq {
   border: 1px solid #3d3c3c;
   justify-content: flex-start;
   width: 80%;
+  max-width: 450px;
   border-radius: 5px;
+  cursor: pointer;
 }
 header .col-izq img {
   max-height: 100%;
@@ -11028,6 +11030,7 @@ header .col-izq h1, header .col-izq .h1 {
   font-style: italic;
 }
 header .col-der {
+  border-left: 1px solid #ccc;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -11058,7 +11061,7 @@ main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
   height: 190px;
 }
 main .somos {
-  margin-top: 30px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11186,16 +11189,32 @@ footer h5, footer .h5 {
     flex-wrap: nowrap;
   }
   header .col-der nav a {
-    border-bottom: 1px solid rgb(70, 70, 70);
     margin: 0 5px;
     font-size: 1.3rem;
     color: #131212;
-    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+  }
+  header .col-der nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #504c4c;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    transform: scale(0);
+  }
+  header .col-der nav a:hover::after, header .col-der nav a :focus::after {
+    opacity: 1;
+    transform-origin: center;
+    transform: scale(1);
   }
   header .col-der nav a:hover {
-    font-size: 1.4rem;
-    width: auto5px;
-    color: #413e3e;
+    color: #504c4c;
   }
   header .menu-mobil {
     display: none;
@@ -11227,5 +11246,21 @@ footer h5, footer .h5 {
   }
   #contact div {
     display: flex;
+  }
+}
+@media all and (min-width: 1400px) {
+  main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
+    height: 500px;
+  }
+  #productos > h2, #productos > .h2 {
+    margin-left: 50px;
+  }
+}
+@media all and (min-width: 2500px) {
+  main .main-banner #carouselExampleInterval .carousel-inner .carousel-item img {
+    height: 800px;
+  }
+  #productos > h2, #productos > .h2 {
+    margin-left: 500px;
   }
 }/*# sourceMappingURL=index.css.map */
