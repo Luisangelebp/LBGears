@@ -21,26 +21,6 @@ export default function (){
         // console.log(distancia);
         window.scrollTo(0, distancia);
 
-        // interval = setInterval(()=>{
-        //     if (position < distancia) {
-
-        //         position += 30;
-        //         console.log(position);
-        //         if(position >= distancia) {
-        //             clearInterval(interval);
-        //         }
-                
-        //     } else if(position > distancia) {
-                
-        //         position  -= 30;
-
-        //     }
-        //     window.scrollTo(0, position)
-        // }, 100)
-
-
-
-
     }
 
     function up(e:Event){
@@ -51,19 +31,8 @@ export default function (){
         if(position > 0 || position < 0) {
             position = 0;
 
-            // position -= 30;
-            // if(position <= 0){
-            //     clearInterval(interval);
-            // }else {
-            //     return;
-            // }
             window.scrollTo(0,position)
         }
-
-        // interval = setInterval(()=>{
-
-
-        // },1500)
 
     }
 
